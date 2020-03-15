@@ -22,6 +22,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
 
+
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
   next(createError(404));
@@ -39,3 +40,9 @@ app.use(function(err, req, res, next) {
 });
 
 module.exports = app;
+module.exports = {
+  HOST: 'us-cdbr-iron-east-04.cleardb.net',
+  USER : 'b076a5a3793807',
+  PASSWORD:'6e68d61f',
+  DB:'heroku_a89387c08d3cdad'
+}
